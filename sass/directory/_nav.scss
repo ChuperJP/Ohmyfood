@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .fonctionnement {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .margin {
+        margin-top: 48px;
+        margin-bottom: 68px;
+
+    }
+}
