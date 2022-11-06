@@ -17,15 +17,11 @@
     color: black;
     background-color: white;
 
-    
-
-    .image {
-        z-index: 1;
-    }
 
     img {
         border-radius: 15px 15px 0 0;
         object-fit: cover;
+        z-index: 1;
     }
     .text {
         position: absolute;
@@ -47,15 +43,42 @@
 
     .container {
         padding: 16px 13px 12px 13px;
+        position: relative;
         div {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: baseline;
           
         }
         h3 {
             margin: 0;
+        }
+
+        i {
+            position: absolute;
+            right: 25px;
+            font-size: 30px;
+        }
+
+        .fa-solid {
+            background-image: $linear-gradient;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                transition: all 250ms;
+            }
+
+        .fa-regular {
+            opacity: 1;
+            
+            &:hover {
+                opacity: 0;
+                transition: all 200ms;
+            }
+        }
         }
 
 
