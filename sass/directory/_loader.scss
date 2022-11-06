@@ -1,9 +1,48 @@
 .loader {
     /*placement loader*/
-    margin: auto;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    
+    position: fixed;
+    z-index: 3;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+   
+    animation: suppress 700ms 2000ms forwards;
+    
+
+    span {
+        background: $linear-gradient;
+        background-clip: text;
+        color: transparent;
+        font-family: Shrikhand-regular;
+        font-size: 30px;
+
+        animation: ohmyfood 2000ms forwards;
+    
+    }
+}
+
+@keyframes suppress {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ohmyfood {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
