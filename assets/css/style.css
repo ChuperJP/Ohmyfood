@@ -10,6 +10,16 @@
   font-family: Roboto-Medium;
   src: url(../../assets/fonts/Roboto/Roboto-Medium.ttf);
 }
+.loader {
+  /*placement loader*/
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -18,6 +28,27 @@
   border-width: 0;
   cursor: pointer;
   text-decoration: none;
+}
+.btn__explorer {
+  position: relative;
+  z-index: 1;
+}
+.btn__explorer:hover::after {
+  opacity: 1;
+}
+.btn__explorer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border-radius: 25px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 .btn__explorer--size {
   padding: 13px 18.75px;
@@ -31,26 +62,106 @@
 .btn__explorer--border_radius {
   border-radius: 25px;
 }
+.btn__fct {
+  position: relative;
+  z-index: 1;
+}
+.btn__fct:hover::after {
+  opacity: 1;
+}
+.btn__fct::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #F5EDFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
 .btn__fct--size {
-  padding: 13px 18.75px;
+  padding: 28px 70px 28px 33px;
+  margin-bottom: 8%;
 }
 .btn__fct--shadow {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .btn__fct--background {
-  background: #F7F7F7;
+  background: #F6F6F6;
 }
 .btn__fct--border_radius {
   border-radius: 20px;
 }
+.btn__fct div {
+  position: absolute;
+  left: 0;
+  margin-left: -11px;
+  padding: 4px 8px;
+  border-radius: 15px;
+  background: #9356DC;
+  color: white;
+}
+.btn__like {
+  z-index: 1;
+  display: inline;
+  justify-content: center;
+  position: relative;
+  width: 13px;
+  padding: 0;
+  background-color: transparent;
+}
+.btn__like i:hover::after {
+  opacity: 1;
+}
+.btn__like i:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  color: gold;
+}
+
+button i {
+  width: 13px;
+  margin-right: 27px;
+  color: #7E7E7E;
+}
+
+body {
+  margin: 0;
+}
+body #bloc_page {
+  max-width: 768px;
+}
+body h2 {
+  font-family: roboto;
+}
+body h3 {
+  font-family: roboto;
+}
+body p {
+  font-family: roboto;
+}
 
 header {
+  position: relative;
+  z-index: 1;
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 header h1 {
   font-family: Shrikhand-Regular;
   font-style: italic;
+  margin: 0;
 }
 
 .location {
@@ -60,14 +171,18 @@ header h1 {
   align-items: baseline;
   background-color: #EAEAEA;
 }
+.location i {
+  margin-right: 17px;
+}
 
 .explorer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #F7F7F7;
-  padding-bottom: 57px;
+  padding: 0 30px 57px 30px;
 }
 
 nav {
@@ -75,6 +190,9 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+nav h2 {
+  margin-bottom: 26px;
 }
 nav .fonctionnement {
   display: flex;
@@ -99,6 +217,7 @@ article {
   flex-direction: column;
   justify-content: flex-start;
   width: auto;
+  position: relative;
   margin-bottom: 5%;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -107,8 +226,26 @@ article {
   color: black;
   background-color: white;
 }
+.card .image {
+  z-index: 1;
+}
 .card img {
   border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+.card .text {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+}
+.card .text p {
+  margin: 0;
+  color: #008766;
+  background-color: #99E2D0;
+  padding: 7px 9px 7px 9px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
 }
 .card .container {
   padding: 16px 13px 12px 13px;
@@ -130,13 +267,21 @@ footer {
   text-align: left;
   color: white;
 }
-footer a {
-  text-decoration: none;
-  color: white;
+footer div {
+  padding-left: 25px;
+  padding-bottom: 33px;
 }
 footer h2 {
   font-family: Shrikhand-Regular;
   font-style: italic;
+}
+footer i {
+  width: 11px;
+  margin-right: 3%;
+}
+footer a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
