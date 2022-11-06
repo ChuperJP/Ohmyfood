@@ -10,14 +10,48 @@
   font-family: Roboto-Medium;
   src: url(../../assets/fonts/Roboto/Roboto-Medium.ttf);
 }
+@keyframes suppress {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes ohmyfood {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loader {
   /*placement loader*/
-  margin: auto;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  animation: suppress 700ms 2000ms forwards;
+}
+.loader span {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: transparent;
+  font-family: Shrikhand-regular;
+  font-size: 30px;
+  font-style: italic;
+  animation: ohmyfood 2000ms forwards;
 }
 
 .btn {
@@ -83,6 +117,9 @@
   z-index: -1;
   transition: opacity 250ms;
 }
+.btn__fct:hover .fa-solid {
+  color: #9356DC;
+}
 .btn__fct--size {
   padding: 28px 70px 28px 33px;
   margin-bottom: 8%;
@@ -96,7 +133,7 @@
 .btn__fct--border_radius {
   border-radius: 20px;
 }
-.btn__fct div {
+.btn__fct span {
   position: absolute;
   left: 0;
   margin-left: -11px;
@@ -104,30 +141,6 @@
   border-radius: 15px;
   background: #9356DC;
   color: white;
-}
-.btn__like {
-  z-index: 1;
-  display: inline;
-  justify-content: center;
-  position: relative;
-  width: 13px;
-  padding: 0;
-  background-color: transparent;
-}
-.btn__like i:hover::after {
-  opacity: 1;
-}
-.btn__like i:hover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-  color: gold;
 }
 
 button i {
@@ -226,12 +239,10 @@ article {
   color: black;
   background-color: white;
 }
-.card .image {
-  z-index: 1;
-}
 .card img {
   border-radius: 15px 15px 0 0;
   object-fit: cover;
+  z-index: 1;
 }
 .card .text {
   position: absolute;
@@ -249,15 +260,37 @@ article {
 }
 .card .container {
   padding: 16px 13px 12px 13px;
+  position: relative;
 }
 .card .container div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: baseline;
 }
 .card .container h3 {
   margin: 0;
+}
+.card .container i {
+  position: absolute;
+  right: 25px;
+  font-size: 30px;
+}
+.card .container .fa-solid {
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.card .container .fa-solid:hover {
+  opacity: 1;
+  transition: all 250ms;
+}
+.card .container .fa-solid .fa-regular {
+  opacity: 1;
+}
+.card .container .fa-solid .fa-regular:hover {
+  opacity: 0;
+  transition: all 200ms;
 }
 
 footer {
