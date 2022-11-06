@@ -4,5 +4,9 @@
     justify-content: center;
     align-items: baseline;
     
-    background-color: #EAEAEA;
+    background-color: $location-backgrnd;
+
+    i {
+        margin-right: 17px;
+    }
 }
