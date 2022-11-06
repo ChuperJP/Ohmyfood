@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <div class="loader"></div>
+    
     <div id="bloc_page">
         <!--HEADER-->
         <header>
@@ -29,26 +31,51 @@
             <div class="explorer">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des réstaurants d'exception, sélectionnés par nos soins.</p>
-                <button type=submit class="btn btn__explorer--size btn__explorer--shadow btn__explorer--background btn__explorer--border_radius">Explorer nos restaurants</button>
+                <button type=submit class="btn btn__explorer btn__explorer--size btn__explorer--shadow btn__explorer--background btn__explorer--border_radius">
+                    Explorer nos restaurants
+                </button>
             </div>
             <nav>
                 <div class="fonctionnement margin">
                 <h2>Fonctionnement</h2>
-                <button type=submit class="btn btn__fct--shadow btn__fct--background btn__fct--border-radius"> <i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button>
-                <button type=submit class="btn btn__fct--shadow btn__fct--background btn__fct--border-radius"><i class="fa-solid fa-list-ul"></i>Composez votre menu</button>
-                <button type=submit class="btn btn__fct--shadow btn__fct--background btn__fct--border-radius"><i class="fa-solid fa-store"></i>Dégustez au restaurant</button>
+                <button type=submit class="btn btn__fct btn__fct--shadow btn__fct--background btn__fct--border_radius btn__fct--size">
+                     <div>
+                        1
+                     </div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                     Choisissez un restaurant
+                    </button>
+                <button type=submit class="btn btn__fct btn__fct--shadow btn__fct--background btn__fct--border_radius btn__fct--size">
+                    <div>
+                        2
+                     </div>
+                    <i class="fa-solid fa-list-ul"></i>Composez votre menu</button>
+                <button type=submit class="btn btn__fct btn__fct--shadow btn__fct--background btn__fct--border_radius btn__fct--size">
+                    <div>
+                        3
+                     </div>
+                    <i class="fa-solid fa-store"></i>Dégustez au restaurant</button>
                 </div>
             </nav>
             <article>
                 <div>
                 <h2>Restaurants</h2>
                 <a href="#" class="card">
-                    <div >
-                        <img src="assets/images/la_palette_du_gout.png" alt="la_palette_du_gout">
+                    <div>
+                        
+                            <div class="image">
+                                <img src="assets/images/la_palette_du_gout.png" alt="la_palette_du_gout">
+                            </div>
+                            <div class="text">
+                                <p>Nouveau</p>
+                            </div>
+                        
                         <div class="container">
                             <div>
                             <h3>La palette du goût</h3>
+                            <button class="btn btn__like">
                             <i class="fa-regular fa-heart"></i>
+                            </button>
                             </div>
                             <p>Ménilmontant</p>
                         </div>
@@ -60,12 +87,13 @@
         </main>
         <!--FOOTER-->
         <footer>
+            <div>
             <h2>ohmyfood</h2>
             <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
             <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
             <p>Mentions légales</p>
             <a href="mailto:name@email.com">Contact</a>
-            
+            </div>
         </footer>
     </div>
 </body>
