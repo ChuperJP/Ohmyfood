@@ -19,9 +19,12 @@
     span {
         background: $linear-gradient;
         background-clip: text;
+        padding-left: 7px;
+        padding-right: 7px;
         color: transparent;
         font-family: Shrikhand-regular;
         font-size: 30px;
+        font-style: italic;
 
         animation: ohmyfood 2000ms forwards;
     
