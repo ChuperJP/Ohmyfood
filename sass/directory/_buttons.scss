@@ -77,6 +77,10 @@
 
     }
 
+    &:hover .fa-solid {
+        color: $main-clr;
+    }
+
 
         &--size{
             padding: 28px 70px 28px 33px;
@@ -94,7 +98,7 @@
             border-radius: 20px;
         }
 
-        div {
+        span {
             position: absolute;
             left: 0;
             margin-left: -11px;
@@ -103,41 +107,6 @@
             background: $main-clr;
             color: white;
         }
-    }
-
-    &__like {
-            z-index: 1;
-            display: inline;
-            justify-content: center;
-            position: relative;
-            width: 13px;
-            padding: 0;
-            background-color: transparent;
-            
-    
-            i {
-            &:hover {
-                &::after{
-                    opacity: 1;
-                }
-    
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    opacity: 0;
-                    z-index: -1;
-                    transition: opacity 250ms;
-                    color: gold;                   
-                
-                }
-            }
-        }
-            
-        
     }
 }
 
