@@ -2,17 +2,29 @@ footer {
     display:flex;
     flex-direction: column;
     
-    background-color: #353535;
+    background-color: $footer-backgrnd;
     text-align: left;
     color: white;
 
-    a {
-        text-decoration: none;
-        color: white;
+    div { 
+        padding-left: 25px;
+        padding-bottom: 33px;
     }
 
     h2 {
         font-family: Shrikhand-Regular;
         font-style: italic;
     }
+
+    i {
+        width: 11px;
+        margin-right: 3%;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+
 }
