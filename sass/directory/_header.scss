@@ -1,10 +1,13 @@
 header { 
+    position: relative;
+    z-index: 1;
     text-align: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
     h1 {
         font-family: Shrikhand-Regular;
         font-style: italic;
+        margin: 0;
     }
 
 }
