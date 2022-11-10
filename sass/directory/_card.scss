@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
    
-    width: auto;
+    max-width: 335px;
     position: relative;
 
     margin-bottom: 5%;
@@ -21,6 +21,7 @@
     img {
         border-radius: 15px 15px 0 0;
         object-fit: cover;
+        max-width: 335px;
         z-index: 1;
     }
     .text {
@@ -54,6 +55,10 @@
             margin: 0;
         }
 
+        p {
+            margin: 5px 0 5px 0;
+        }
+
         i {
             position: absolute;
             right: 25px;
@@ -68,7 +73,7 @@
 
             &:hover {
                 opacity: 1;
-                transition: all 250ms;
+                transition: all 400ms;
             }
 
         .fa-regular {
@@ -76,7 +81,7 @@
             
             &:hover {
                 opacity: 0;
-                transition: all 200ms;
+                transition: all 400ms;
             }
         }
         }
@@ -84,5 +89,40 @@
 
 }
 }
+
+/* restaurant*/
+
+.card__menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+    margin-bottom: 5%;
+
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+
+    border-radius: 15px;
+   
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    h4 {
+        font-family: Roboto-Medium;
+    }
+
+    p {
+        font-family: roboto-light;
+    }
+    
+    .price {
+        font-family: Roboto-Medium;
+    }
+    
+
+}
+
 
 
