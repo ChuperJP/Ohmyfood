@@ -1,7 +1,10 @@
 header { 
     position: relative;
     z-index: 1;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
     h1 {
@@ -9,5 +12,16 @@ header {
         font-style: italic;
         margin: 0;
     }
+
+
+    a {
+         position: absolute;
+         left: 0;
+         margin-left: 5%;
+    }
+
+    i{
+        color: $footer-backgrnd;
+     }    
 
 }
