@@ -1,0 +1,6 @@
+@mixin mobile_plus {
+    @media screen and (min-width: map-get($breakpoints, mobile))
+    {
+        @content;
+    }
+}
