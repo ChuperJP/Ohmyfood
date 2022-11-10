@@ -1,3 +1,5 @@
+/*couleurs*/
+
 $main-clr: #9356DC;
 $main-backgrnd: #F7F7F7;
 $btn-backgrnd : #F6F6F6;
@@ -10,3 +12,8 @@ $nouveau-colorfnt: #008766;
 $nouveau-colorbackgrnd: #99E2D0;
 $footer-backgrnd: #353535;
 
+
+/*breakpoint*/
+$breakpoints: (
+    mobile: 768px
+);
