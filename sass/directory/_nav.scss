@@ -3,9 +3,11 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+   
     h2 {
         margin-bottom: 26px;
+        text-align: left;
+        margin-left: -11px;
     }
 
     .fonctionnement {
@@ -13,12 +15,15 @@ nav {
         flex-direction: column;
         justify-content: space-around;
 
+        @include mobile_plus {
+            flex-direction: row;
+            gap: 5%;
+        }
 
     }
+}
 
-    .margin {
-        margin-top: 48px;
-        margin-bottom: 68px;
+.padding {
+    padding: 48px 20px 68px 20px;
 
-    }
 }
