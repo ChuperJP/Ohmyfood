@@ -6,23 +6,53 @@ footer {
     text-align: left;
     color: white;
 
+    padding-bottom: 33px;
+
+    @include mobile_plus {
+        flex-direction: row-reverse;
+        align-items: baseline;
+
+    }
+
     div { 
         padding-left: 25px;
-        padding-bottom: 33px;
+        
+        @include mobile_plus {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+            gap: 5%;
+        }
+
+    }
+    .footer__title {
+        @include mobile_plus {
+            padding-right: 8%;
+            padding-left: 8%;
+        }
     }
 
     h2 {
         font-family: Shrikhand-Regular;
         font-style: italic;
+        margin-bottom: 0;
+        margin-top: 22px;
+
+    }
+
+    p {
+        font-family: roboto-medium;
     }
 
     i {
         width: 11px;
-        margin-right: 3%;
+        margin-right: 15px;
     }
 
     a {
         text-decoration: none;
+        font-family: roboto-medium;
         color: white;
     }
 
