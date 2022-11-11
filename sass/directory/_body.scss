@@ -1,19 +1,27 @@
 body {
-    margin: 0;
-
-    #bloc_page {
-        max-width: 768px;
-    }
+    margin: auto;
+    max-width: 1400px;
 
     h2 {
-        font-family: roboto;
+        font-family: roboto-medium;
     }
 
     h3 {
-        font-family: roboto;
+        font-family: roboto-medium;
     }
 
     p {
-        font-family: roboto;
+        font-family: roboto-light;
+       
+    }
+
+    .img__backgrnd
+    {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        z-index: -1;
     }
 }
