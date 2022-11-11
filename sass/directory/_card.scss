@@ -9,7 +9,6 @@
     margin-bottom: 5%;
 
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
 
     border-radius: 15px;
    
@@ -92,36 +91,77 @@
 
 /* restaurant*/
 
-.card__menu
+.card_menu
 {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
    
-    margin-bottom: 5%;
-
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    margin-bottom: 12px;
+    /*padding: 5px 15px 5px 15px;*/
 
     border-radius: 15px;
-   
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    
+    overflow: hidden;
+    white-space: nowrap;
     text-decoration: none;
     color: black;
     background-color: white;
 
     h4 {
         font-family: Roboto-Medium;
+        margin: 5px 0 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     p {
         font-family: roboto-light;
+        margin: 5px 0 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-    
-    .price {
-        font-family: Roboto-Medium;
-    }
-    
 
+    .__description {
+        padding: 10px 0 10px 10px;
+        overflow: hidden;
+    }
+    
+    .__price {
+       
+        margin-left: auto;
+        display: flex;
+        align-items: flex-end;
+        padding: 10px 0 10px 0;
+        margin-right: 17px;
+
+        p{
+            font-family: Roboto-Medium;
+        }
+    }
+    
+    .__valid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $nouveau-colorbackgrnd;
+        border-radius: 0 15px 15px 0;
+        width: 60px;
+        margin-right: -60px;
+
+        transition: all 250ms;
+
+        i{
+            color: white;
+            font-size: 20px;
+        }               
+    }
+
+    &:hover .__valid{
+        margin-right: 0;
+        
+    
+    }
 }
 
 
