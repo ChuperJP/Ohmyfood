@@ -7,7 +7,12 @@ section {
             padding: 32px 13px 40px 13px;
         }
         &--position{
-            margin-top: -50px;
+            margin-top: -80px;
+            
+            @include mobile_plus {
+                margin-left: 15%;
+                margin-right: 15%;
+            }
         }
     }
 
@@ -19,11 +24,41 @@ section {
 
     h3 {
         font-family: roboto-light;
+        position: relative;
+
+        &::after{
+            content: "";
+            height: 3px;
+            width: 40px;
+            background-color: $nouveau-colorbackgrnd;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-bottom: -8px;
+        }
+    }
+
+    .entree {
+        margin-bottom: 40px;
+
+        animation: menu-appear $time-menu-appear ease-in-out both;
+    }
+
+    .plat {
+        margin-bottom: 40px;
+        animation: menu-appear $time-menu-appear $time-menu-appear/4*1 ease-in-out both;
+    }
+
+    .dessert {
+        margin-bottom: 40px;
+        animation: menu-appear $time-menu-appear $time-menu-appear/4*2 ease-in-out both;
     }
     
         .name {
+            display: flex;
             position: relative;
-
+            align-items: center;
+            margin-bottom: 24px;        
             
         i {
             position: absolute;
