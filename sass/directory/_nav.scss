@@ -17,7 +17,7 @@ nav {
 
         @include mobile_plus {
             flex-direction: row;
-            gap: 5%;
+            gap: 3%;
         }
 
     }
@@ -26,4 +26,7 @@ nav {
 .padding {
     padding: 48px 20px 68px 20px;
 
+    @include mobile_plus {
+        padding: 48px 25px 68px 25px;
+    }
 }
