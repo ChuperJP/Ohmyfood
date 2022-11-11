@@ -50,11 +50,18 @@
     &--border_radius {
         border-radius: 25px;
     }
+
+    &--font{
+        font-family: roboto-medium;
+        color: white;
+        font-weight: 500;
+    }
   
 }
     &__fct {
         position: relative;
         z-index: 1;
+        flex-shrink: 0;
 
     &:hover {
         &::after {
@@ -84,7 +91,12 @@
 
         &--size{
             padding: 28px 70px 28px 33px;
-            margin-bottom: 8%;
+            margin-bottom: 10%;
+            max-width: 322px;
+            
+            @include mobile_plus {
+             margin-bottom: 0;
+            }
         }
     
         &--shadow{
@@ -96,6 +108,11 @@
         }
         &--border_radius {
             border-radius: 20px;
+        }
+
+        &--font{
+            font-family: roboto-medium;
+            font-weight: 500;
         }
 
         span {
@@ -112,11 +129,22 @@
 
 
 button {
-
+ 
     i{
     width: 13px;
         margin-right: 27px;
         color: $btn-icon-backgrnd;
+    }
+}
+
+
+.btn__order{
+    display: flex;
+    justify-content: center;
+
+    .btn__order--size{
+        padding: 13px 0;
+        width: 186px;
     }
 }
 
