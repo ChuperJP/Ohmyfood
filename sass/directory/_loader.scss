@@ -1,24 +1,3 @@
-@keyframes suppress {
-    0% {
-        opacity: 1;
-    }
-  
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes ohmyfood {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 
 .loader {
     /*placement loader*/
