@@ -28,7 +28,7 @@ footer {
     }
     .footer__title {
         @include mobile_plus {
-            padding-right: 8%;
+            padding-right: 6%;
             padding-left: 8%;
         }
     }
@@ -43,6 +43,7 @@ footer {
 
     p {
         font-family: roboto-medium;
+        flex-shrink: 0;
     }
 
     i {
