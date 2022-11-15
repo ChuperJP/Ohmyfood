@@ -95,13 +95,11 @@
           animation: suppress 700ms 2000ms forwards;
 }
 .loader span {
-  background: -o-linear-gradient(249.36deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   -webkit-background-clip: text;
           background-clip: text;
   padding-left: 7px;
   padding-right: 7px;
-  color: transparent;
+  color: white;
   font-family: Shrikhand-regular;
   font-size: 30px;
   font-style: italic;

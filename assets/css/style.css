@@ -59,11 +59,9 @@
   animation: suppress 700ms 2000ms forwards;
 }
 .loader span {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: text;
   padding-left: 7px;
   padding-right: 7px;
-  color: transparent;
+  color: white;
   font-family: Shrikhand-regular;
   font-size: 30px;
   font-style: italic;
@@ -120,7 +118,6 @@
 .btn__fct {
   position: relative;
   z-index: 1;
-  flex-shrink: 0;
 }
 .btn__fct:hover::after {
   opacity: 1;
@@ -144,7 +141,7 @@
 }
 .btn__fct--size {
   padding: 28px 70px 28px 33px;
-  margin-bottom: 10%;
+  margin-bottom: 25px;
   max-width: 322px;
 }
 @media screen and (min-width: 768px) {
@@ -192,7 +189,6 @@ button i {
 
 body {
   margin: auto;
-  max-width: 1400px;
 }
 body h2 {
   font-family: roboto-medium;
@@ -207,7 +203,7 @@ body .img__backgrnd {
   display: block;
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   object-fit: cover;
   z-index: -1;
 }
@@ -269,10 +265,15 @@ nav h2 {
   text-align: left;
   margin-left: -11px;
 }
+@media screen and (min-width: 768px) {
+  nav .wrapper {
+    width: 100%;
+    max-width: 910px;
+  }
+}
 nav .fonctionnement {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 @media screen and (min-width: 768px) {
   nav .fonctionnement {
@@ -342,6 +343,8 @@ section.__menu--position {
   section.__menu--position {
     margin-left: 15%;
     margin-right: 15%;
+    padding-left: 13%;
+    padding-right: 13%;
   }
 }
 section h2 {
@@ -380,6 +383,8 @@ section .name {
   position: relative;
   align-items: center;
   margin-bottom: 24px;
+  max-width: 400px;
+  margin: auto;
 }
 section .name i {
   position: absolute;
@@ -389,6 +394,7 @@ section .name i {
 section .name .fa-solid {
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
 }
@@ -420,7 +426,8 @@ section .name .fa-solid .fa-regular:hover {
 .card img {
   border-radius: 15px 15px 0 0;
   object-fit: cover;
-  max-width: 335px;
+  width: 335px;
+  height: 231px;
   z-index: 1;
 }
 .card .text {
@@ -436,6 +443,11 @@ section .name .fa-solid .fa-regular:hover {
   padding: 7px 9px 7px 9px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
+}
+@media screen and (min-width: 768px) {
+  .card--margin {
+    margin-right: 5%;
+  }
 }
 .card .container {
   padding: 16px 13px 12px 13px;
@@ -460,6 +472,7 @@ section .name .fa-solid .fa-regular:hover {
 .card .container .fa-solid {
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
 }
@@ -562,7 +575,7 @@ footer div {
 @media screen and (min-width: 768px) {
   footer .footer__title {
     padding-right: 6%;
-    padding-left: 8%;
+    padding-left: 6.5%;
   }
 }
 footer h2 {
