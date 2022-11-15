@@ -12,6 +12,8 @@ section {
             @include mobile_plus {
                 margin-left: 15%;
                 margin-right: 15%;
+                padding-left: 13%;
+                padding-right: 13%;
             }
         }
     }
@@ -58,8 +60,10 @@ section {
             display: flex;
             position: relative;
             align-items: center;
-            margin-bottom: 24px;        
+            margin-bottom: 24px;
             
+            max-width: 400px;
+            margin: auto;            
         i {
             position: absolute;
             right: 25px;
@@ -69,6 +73,7 @@ section {
         .fa-solid {
             background-image: $linear-gradient;
             background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
             opacity: 0;
     
