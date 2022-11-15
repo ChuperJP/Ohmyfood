@@ -20,7 +20,8 @@
     img {
         border-radius: 15px 15px 0 0;
         object-fit: cover;
-        max-width: 335px;
+        width: 335px;
+        height: 231px;
         z-index: 1;
     }
     .text {
@@ -39,6 +40,13 @@
             border-radius: 2px;
         }
 
+    }
+
+    &--margin {
+        @include mobile_plus {
+            margin-right: 5%;
+        }
+       
     }
 
     .container {
@@ -67,6 +75,7 @@
         .fa-solid {
             background-image: $linear-gradient;
             background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
             opacity: 0;
 
