@@ -10,10 +10,17 @@ nav {
         margin-left: -11px;
     }
 
+    .wrapper{
+        @include mobile_plus {
+        width: 100%;
+        max-width: 910px;
+        }
+    }
+
     .fonctionnement {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        
 
         @include mobile_plus {
             flex-direction: row;
