@@ -61,7 +61,8 @@
     &__fct {
         position: relative;
         z-index: 1;
-        flex-shrink: 0;
+        
+        
 
     &:hover {
         &::after {
@@ -91,7 +92,7 @@
 
         &--size{
             padding: 28px 70px 28px 33px;
-            margin-bottom: 10%;
+            margin-bottom: 25px;
             max-width: 322px;
             
             @include mobile_plus {
